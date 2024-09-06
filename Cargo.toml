@@ -3,4 +3,42 @@ name = "watch-rs"
 version = "0.1.0"
 edition = "2021"
 
+[[bin]]
+name = "watcher"
+path = "src/bin/watcher.rs"
+
+[[bin]]
+name = "watcher_tui"
+path = "src/bin/watcher_tui/main.rs"
+
+[[bin]]
+name = "try"
+path = "src/bin/try.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
 [dependencies]
+once_cell = "*"
+ctor = "0.2.8"
+rand = "*"
+rand_chacha = "*"
+
+clap = { version = "4.5.16", features = ["derive"] }
+
+rexpect = "0.4.0"
+subprocess = "*"
+tempfile = "*"
+signal-hook = "0.3.17"
+crossbeam-channel = "0.5.13"
+
+crossterm = "*"
+ratatui = { version = "0.28.1", default-features = false, features = ['crossterm'] }
+
+
+log = "0.4.22"
+log4rs = "*"
+structstruck = "0.4.1"
+strum = "0.26.3"
+tui-textarea = "0.6.1"
+chrono = "0.4.38"
+iana-time-zone = "0.1.60"
