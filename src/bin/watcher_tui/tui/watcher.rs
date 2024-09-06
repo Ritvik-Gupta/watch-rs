@@ -131,7 +131,7 @@ impl WatcherTui {
 
         let para = Paragraph::new(Text::raw(&self.current_event.output))
             .block(block)
-            .wrap(Wrap { trim: true });
+            .wrap(Wrap { trim: false });
         f.render_widget(para, chunks[0]);
 
         // Bottom two inner blocks
